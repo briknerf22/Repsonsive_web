@@ -18,7 +18,7 @@ nav ul li:not(:last-child) {
 /* Style for navigation links */
 nav ul li a {
     text-decoration: none; /* Remove underline */
-    color: #333; /* Text color */
+    color: black; /* Text color */
 }
 
 /* Style for active navigation link */
@@ -39,6 +39,7 @@ body {
     align-items: center; /* Vertically center */
     height: 100vh; /* Take up the full height of the viewport */
     margin: 0; /* Remove default margin */
+    background-color: #fff; /* Set background color to white */
 }
 
 /* Set the maximum width of the page */
@@ -46,4 +47,6 @@ main {
     max-width: 1000px; /* Adjust as needed */
     width: 100%; /* Take up available width */
     padding: 0 20px; /* Add some padding to the sides */
+    background-color: #333; /* Set background color to #333 */
+    color: #fff; /* Set text color to white */
 }
