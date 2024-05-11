@@ -1,0 +1,49 @@
+/* Reset default list styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for navigation links */
+nav ul li {
+    display: inline; /* Display items horizontally */
+}
+
+/* Add space between navigation links */
+nav ul li:not(:last-child) {
+    margin-right: 20px; /* Adjust as needed */
+}
+
+/* Style for navigation links */
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+}
+
+/* Style for active navigation link */
+nav ul li a:hover {
+    color: #ff6347; /* Hover color */
+}
+
+/* Style for logo */
+.logo img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Center the page content */
+body {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* Take up the full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+
+/* Set the maximum width of the page */
+main {
+    max-width: 1000px; /* Adjust as needed */
+    width: 100%; /* Take up available width */
+    padding: 0 20px; /* Add some padding to the sides */
+}
