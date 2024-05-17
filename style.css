@@ -121,13 +121,14 @@ footer {
     margin: 0 auto;
 }
 
-/* Style for social icons */
+/* Style for social icon container */
 .social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Style for individual social icon */
 .social-icon {
     margin-right: 10px;
     text-align: center;
