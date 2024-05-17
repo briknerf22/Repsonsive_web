@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #219EBC;
+    --header-footer-cl: #023047;
+    --title-color: #023047;
+    --hover-color: #ff6347;
+    --background-color: #fff;
+    --main-bg-color: #333;
+    --main-text-color: #fff;
+}
+
 /* Reset default list styles */
 nav ul {
     list-style-type: none;
@@ -18,12 +28,12 @@ nav ul li:not(:last-child) {
 /* Style for navigation links */
 nav ul li a {
     text-decoration: none; /* Remove underline */
-    color: black; /* Text color */
+    color: var(--primary-color); /* Use primary color */
 }
 
 /* Style for active navigation link */
 nav ul li a:hover {
-    color: #ff6347; /* Hover color */
+    color: var(--hover-color); /* Use hover color */
 }
 
 /* Style for logo */
@@ -32,21 +42,43 @@ nav ul li a:hover {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Center the page content */
-body {
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    height: 100vh; /* Take up the full height of the viewport */
-    margin: 0; /* Remove default margin */
-    background-color: #fff; /* Set background color to white */
+/* Container setup with grid */
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: var(--background-color); /* Set background color */
 }
 
-/* Set the maximum width of the page */
+/* Header styling */
+header {
+    width: 100%;
+    background-color: var(--header-footer-cl); /* Use header-footer color */
+    color: var(--main-text-color); /* Set text color to white */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Main styling */
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     max-width: 1000px; /* Adjust as needed */
     width: 100%; /* Take up available width */
-    padding: 0 20px; /* Add some padding to the sides */
-    background-color: #333; /* Set background color to #333 */
-    color: #fff; /* Set text color to white */
+    padding: 20px; /* Add some padding */
+    background-color: var(--main-bg-color); /* Set background color */
+    color: var(--main-text-color); /* Set text color */
+    box-sizing: border-box;
+    margin: auto;
+}
+
+/* Footer styling */
+footer {
+    width: 100%;
+    background-color: var(--header-footer-cl); /* Use header-footer color */
+    color: var(--main-text-color); /* Set text color to white */
+    text-align: center;
+    padding: 20px 0;
 }
