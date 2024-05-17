@@ -104,12 +104,41 @@ main {
     box-sizing: border-box;
 }
 
-/* Footer styling */
+/* Style for footer */
 footer {
-    grid-area: footer;
-    width: 100%;
     background-color: var(--header-footer-cl); /* Use header-footer color */
     color: var(--main-text-color); /* Set text color to white */
     text-align: center;
     padding: 20px 0;
+}
+
+/* Style for footer content */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Style for social icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    margin-right: 10px;
+    text-align: center;
+}
+
+.social-icon img {
+    width: 30px;
+    height: auto;
+}
+
+/* Style for footer info */
+.footer-info {
+    text-align: center;
 }
