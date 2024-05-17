@@ -37,6 +37,7 @@ nav ul li a:hover {
     display: flex; /* Use flexbox to align items */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
+    text-decoration: none;
 }
 
 .logo img {
@@ -47,8 +48,9 @@ nav ul li a:hover {
 }
 
 .logo h1 {
-    color: #fff; /* Change the color of the title to white */
+    color: white;
     font-size: 24px; /* Adjust the font size of the title */
+    text-decoration: none;
 }
 
 
