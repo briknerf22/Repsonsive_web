@@ -143,3 +143,22 @@ footer {
 .footer-info {
     text-align: center;
 }
+
+/* Styles for photo container */
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between photos */
+}
+
+.photo-container img {
+    max-width: 100%; /* Set maximum width to prevent distortion */
+    height: auto; /* Allow height to adjust automatically */
+    max-height: 300px; /* Optionally set maximum height to prevent images from becoming too tall */
+}
+
+/* Styles for description */
+.description {
+    text-align: center;
+}
