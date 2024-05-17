@@ -18,11 +18,7 @@ nav ul {
 /* Style for navigation links */
 nav ul li {
     display: inline; /* Display items horizontally */
-}
-
-/* Add space between navigation links */
-nav ul li:not(:last-child) {
-    margin-right: 20px; /* Adjust as needed */
+    margin-right: 20px; /* Add space between items */
 }
 
 /* Style for navigation links */
@@ -42,16 +38,33 @@ nav ul li a:hover {
     height: auto; /* Maintain aspect ratio */
 }
 
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh; /* Ensure full height */
+    margin: 0; /* Remove default margin */
+    background-color: var(--background-color); /* Set background color to white */
+}
+
 /* Container setup with grid */
 .container {
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    max-width: 1000px; /* Set the maximum width for the container */
+    width: 100%; /* Make container take the full width available */
     background-color: var(--background-color); /* Set background color */
 }
 
 /* Header styling */
 header {
+    grid-area: header;
     width: 100%;
     background-color: var(--header-footer-cl); /* Use header-footer color */
     color: var(--main-text-color); /* Set text color to white */
@@ -59,23 +72,27 @@ header {
     padding: 20px 0;
 }
 
+/* Navigation styling */
+nav {
+    grid-area: nav;
+    background-color: var(--header-footer-cl); /* Use header-footer color */
+    color: var(--main-text-color); /* Set text color to white */
+    text-align: center;
+    padding: 20px;
+}
+
 /* Main styling */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px; /* Adjust as needed */
-    width: 100%; /* Take up available width */
+    grid-area: main;
     padding: 20px; /* Add some padding */
     background-color: var(--main-bg-color); /* Set background color */
     color: var(--main-text-color); /* Set text color */
     box-sizing: border-box;
-    margin: auto;
 }
 
 /* Footer styling */
 footer {
+    grid-area: footer;
     width: 100%;
     background-color: var(--header-footer-cl); /* Use header-footer color */
     color: var(--main-text-color); /* Set text color to white */
