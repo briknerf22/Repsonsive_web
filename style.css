@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --primary-color: #219EBC;
     --header-footer-cl: #023047;
@@ -51,6 +53,7 @@ nav ul li a:hover {
     color: white;
     font-size: 24px; /* Adjust the font size of the title */
     text-decoration: none;
+    font-family: 'EB Garamond', serif;
 }
 
 
@@ -62,6 +65,7 @@ body {
     min-height: 100vh; /* Ensure full height */
     margin: 0; /* Remove default margin */
     background-color: var(--background-color); /* Set background color to white */
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Container setup with grid */
