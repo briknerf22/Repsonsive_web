@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Root variables for colors */
 :root {
     --primary-color: #219EBC;
     --header-footer-cl: #023047;
@@ -50,12 +51,10 @@ nav ul li a:hover {
 }
 
 .logo h1 {
-    color: white;
+    color: var(--title-color); /* Use title color */
     font-size: 24px; /* Adjust the font size of the title */
-    text-decoration: none;
-    font-family: 'EB Garamond', serif;
+    font-family: 'EB Garamond', serif; /* Use the EB Garamond font */
 }
-
 
 /* Body styling */
 body {
@@ -65,7 +64,7 @@ body {
     min-height: 100vh; /* Ensure full height */
     margin: 0; /* Remove default margin */
     background-color: var(--background-color); /* Set background color to white */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
 }
 
 /* Container setup with grid */
@@ -110,8 +109,46 @@ main {
     box-sizing: border-box;
 }
 
+/* Gallery styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure images cover the area without deforming */
+}
+
+/* Style for larger images */
+.gallery img.large {
+    grid-column: span 2; /* Make the image span two columns */
+    grid-row: span 2; /* Make the image span two rows */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+
+    .gallery img.large {
+        grid-column: span 1; /* Make large images span one column on smaller screens */
+        grid-row: span 1; /* Make large images span one row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
 /* Style for footer */
 footer {
+    grid-area: footer;
     background-color: var(--header-footer-cl); /* Use header-footer color */
     color: var(--main-text-color); /* Set text color to white */
     text-align: center;
@@ -121,7 +158,7 @@ footer {
 /* Style for footer content */
 .footer-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
@@ -132,6 +169,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 /* Style for individual social icon */
@@ -147,24 +185,5 @@ footer {
 
 /* Style for footer info */
 .footer-info {
-    text-align: center;
-}
-
-/* Styles for photo container */
-.photo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Adjust the gap between photos */
-}
-
-.photo-container img {
-    max-width: 100%; /* Set maximum width to prevent distortion */
-    height: auto; /* Allow height to adjust automatically */
-    max-height: 300px; /* Optionally set maximum height to prevent images from becoming too tall */
-}
-
-/* Styles for description */
-.description {
     text-align: center;
 }
