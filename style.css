@@ -22,6 +22,7 @@ nav ul {
 nav ul li {
     display: inline; /* Display items horizontally */
     margin-right: 20px; /* Add space between items */
+    position: relative; /* Required for submenu positioning */
 }
 
 /* Style for navigation links */
@@ -33,6 +34,34 @@ nav ul li a {
 /* Style for active navigation link */
 nav ul li a:hover {
     color: var(--hover-color); /* Use hover color */
+}
+
+/* Submenu styling */
+.submenu {
+    display: none; /* Hide submenu by default */
+    position: absolute; /* Position submenu relative to parent */
+    top: 100%; /* Position submenu below parent */
+    left: 0;
+    background-color: var(--header-footer-cl); /* Use header-footer color */
+    padding: 10px;
+    list-style-type: none;
+}
+
+/* Show submenu on hover */
+nav ul li:hover .submenu {
+    display: block;
+}
+
+/* Submenu link styling */
+.submenu li {
+    display: block;
+    margin-right: 0;
+}
+
+.submenu li a {
+    color: var(--main-text-color); /* Set text color to white */
+    display: block;
+    padding: 5px 10px;
 }
 
 /* Style for logo */
@@ -53,7 +82,6 @@ nav ul li a:hover {
 .logo h1 {
     color: var(--title-color); /* Use title color */
     font-size: 24px; /* Adjust the font size of the title */
-    font-family: 'EB Garamond', serif; /* Use the EB Garamond font */
 }
 
 /* Body styling */
@@ -109,41 +137,30 @@ main {
     box-sizing: border-box;
 }
 
-/* Gallery styling */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+/* Section styling */
+section {
+    margin-bottom: 20px; /* Add space between sections */
 }
 
-.gallery img {
+section img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Table styling */
+table {
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensure images cover the area without deforming */
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
-/* Style for larger images */
-.gallery img.large {
-    grid-column: span 2; /* Make the image span two columns */
-    grid-row: span 2; /* Make the image span two rows */
+table, th, td {
+    border: 1px solid #ccc;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
-    }
-
-    .gallery img.large {
-        grid-column: span 1; /* Make large images span one column on smaller screens */
-        grid-row: span 1; /* Make large images span one row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        grid-template-columns: 1fr; /* Single column on very small screens */
-    }
+th, td {
+    padding: 10px;
+    text-align: left;
 }
 
 /* Style for footer */
