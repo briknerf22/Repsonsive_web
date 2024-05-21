@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fandova kavárna</title>
+    <title>Fandova kavárna - Our Offer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="logo">
-                <img src="img/logo.svg" alt="Logo restaurace">
-                <h1>Fandova kavárna</h1>
-            </a>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="Logo restaurace">
+                    <h1>Fandova kavárna</h1>
+                </a>
+            </div>
         </header>
         <nav>
             <ul>
@@ -20,10 +22,79 @@
                 <li><a href="menu.html" target="_blank">Menu</a></li>
                 <li><a href="photos.html" target="_blank">Photos</a></li>
                 <li><a href="contacts.html" target="_blank">Contacts</a></li>
+                <li><a href="offer.html">Our Offer</a>
+                    <ul class="submenu">
+                        <li><a href="#coffee">Coffee</a></li>
+                        <li><a href="#pastries">Pastries</a></li>
+                        <li><a href="#lunch">Lunch</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                        <li><a href="#prices">Prices</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <main>
-            
+            <h1>Our Offer</h1>
+
+            <section id="coffee">
+                <h2>Coffee</h2>
+                <img src="img/coffee.jpg" alt="Coffee">
+                <p>We offer a variety of coffee blends from around the world, carefully selected and roasted to perfection. Our coffee menu includes espresso, cappuccino, latte, and more.</p>
+            </section>
+
+            <section id="pastries">
+                <h2>Pastries</h2>
+                <img src="img/pastries.jpg" alt="Pastries">
+                <p>Our pastries are freshly baked every day. Enjoy a selection of croissants, muffins, cakes, and other delicious treats.</p>
+            </section>
+
+            <section id="lunch">
+                <h2>Lunch</h2>
+                <img src="img/lunch.jpg" alt="Lunch">
+                <p>We offer a range of lunch options including sandwiches, salads, and daily specials. Perfect for a quick bite or a leisurely meal.</p>
+            </section>
+
+            <section id="equipment">
+                <h2>Equipment</h2>
+                <img src="img/equipment.jpg" alt="Equipment">
+                <p>Our café is equipped with state-of-the-art coffee machines and kitchen equipment to ensure the highest quality of our offerings.</p>
+            </section>
+
+            <section id="prices">
+                <h2>Prices</h2>
+                <img src="img/prices.jpg" alt="Prices">
+                <p>We offer competitive prices for all our products and services. Below is a sample price list:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Espresso</td>
+                            <td>$3.00</td>
+                        </tr>
+                        <tr>
+                            <td>Cappuccino</td>
+                            <td>$4.00</td>
+                        </tr>
+                        <tr>
+                            <td>Croissant</td>
+                            <td>$2.50</td>
+                        </tr>
+                        <tr>
+                            <td>Sandwich</td>
+                            <td>$5.00</td>
+                        </tr>
+                        <tr>
+                            <td>Salad</td>
+                            <td>$6.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
         <footer>
             <div class="footer-content">
@@ -46,7 +117,7 @@
                     <p>Created by František Brikner</p>
                 </div>
             </div>
-        </footer>             
+        </footer>
     </div>
 </body>
 </html>
