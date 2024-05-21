@@ -143,8 +143,9 @@ section {
 }
 
 section img {
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Allow the width to adjust based on the specified height */
+    height: 100px; /* Set a smaller height for the images */
+    object-fit: cover; /* Maintain aspect ratio without deforming */
 }
 
 /* Style for footer */
