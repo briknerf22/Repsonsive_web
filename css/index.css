@@ -142,9 +142,33 @@ section {
     margin-bottom: 20px; /* Add space between sections */
 }
 
+/* Style for the photo container */
+.photo-container {
+    display: flex; /* Change display to flex */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    overflow-x: auto; /* Add horizontal scrolling if images overflow */
+}
+
+/* Style for all images inside the photo container */
+.photo-container img {
+    height: 200px; /* Set the desired height for all images */
+    width: auto; /* Allow width to adjust based on the specified height */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    max-width: 100%; /* Ensure images don't exceed container width */
+    object-fit: cover; /* Maintain aspect ratio without deforming */
+}
+
+/* Style for the first image */
+.photo-container img:first-child {
+    height: 200px; /* Set the desired height */
+}
+
 section img {
-    width: auto; /* Allow the width to adjust based on the specified height */
-    height: 100px; /* Set a smaller height for the images */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    max-height: 200px; /* Set a maximum height for the images */
     object-fit: cover; /* Maintain aspect ratio without deforming */
 }
 
