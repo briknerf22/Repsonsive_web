@@ -20,15 +20,17 @@ nav ul {
 
 /* Style for navigation links */
 nav ul li {
-    display: inline; /* Display items horizontally */
-    margin-right: 20px; /* Add space between items */
-    position: relative; /* Required for submenu positioning */
+    margin-bottom: 10px; /* Add space between items vertically */
 }
 
 /* Style for navigation links */
 nav ul li a {
     text-decoration: none; /* Remove underline */
     color: var(--primary-color); /* Use primary color */
+    display: block; /* Make links block elements */
+    padding: 10px; /* Add padding for better click area */
+    background-color: var(--header-footer-cl); /* Background color for links */
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Style for active navigation link */
@@ -38,30 +40,14 @@ nav ul li a:hover {
 
 /* Submenu styling */
 .submenu {
-    display: none; /* Hide submenu by default */
-    position: absolute; /* Position submenu relative to parent */
-    top: 100%; /* Position submenu below parent */
-    left: 0;
-    background-color: var(--header-footer-cl); /* Use header-footer color */
-    padding: 10px;
     list-style-type: none;
-}
-
-/* Show submenu on hover */
-nav ul li:hover .submenu {
-    display: block;
-}
-
-/* Submenu link styling */
-.submenu li {
-    display: block;
-    margin-right: 0;
+    padding-left: 20px; /* Indent submenu items */
+    margin-top: 10px;
 }
 
 .submenu li a {
+    background-color: transparent; /* Remove background for submenu items */
     color: var(--main-text-color); /* Set text color to white */
-    display: block;
-    padding: 5px 10px;
 }
 
 /* Style for logo */
@@ -73,7 +59,7 @@ nav ul li:hover .submenu {
 }
 
 .logo img {
-    width: 100px; /* Adjust the width of the image */
+    width: 50px; /* Adjust the width of the image */
     height: auto; /* Maintain aspect ratio */
     margin-right: 10px; /* Add some space between image and title */
     filter: invert(1) hue-rotate(180deg); /* Change the color of the image */
@@ -82,6 +68,7 @@ nav ul li:hover .submenu {
 .logo h1 {
     color: var(--title-color); /* Use title color */
     font-size: 24px; /* Adjust the font size of the title */
+    margin: 0; /* Remove default margin */
 }
 
 /* Body styling */
@@ -97,13 +84,8 @@ body {
 
 /* Container setup with grid */
 .container {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "footer";
-    grid-template-columns: 1fr;
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column;
     max-width: 1000px; /* Set the maximum width for the container */
     width: 100%; /* Make container take the full width available */
     background-color: var(--background-color); /* Set background color */
@@ -111,30 +93,35 @@ body {
 
 /* Header styling */
 header {
-    grid-area: header;
     width: 100%;
     background-color: var(--header-footer-cl); /* Use header-footer color */
     color: var(--main-text-color); /* Set text color to white */
-    text-align: center;
     padding: 20px 0;
+    text-align: center; /* Center align text */
 }
 
-/* Navigation styling */
-nav {
-    grid-area: nav;
-    background-color: var(--header-footer-cl); /* Use header-footer color */
-    color: var(--main-text-color); /* Set text color to white */
-    text-align: center;
+/* Content setup with grid */
+.content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px; /* Add gap between sidebar and main content */
+    max-width: 1200px; /* Set maximum width */
+    margin: 0 auto; /* Center the content */
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: var(--header-footer-cl); /* Set background color */
     padding: 20px;
+    border-radius: 10px;
 }
 
-/* Main styling */
-main {
-    grid-area: main;
-    padding: 20px; /* Add some padding */
+/* Main content styling */
+.main-content {
     background-color: var(--main-bg-color); /* Set background color */
-    color: var(--main-text-color); /* Set text color */
-    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px; /* Set the fixed width for main content */
 }
 
 /* Section styling */
@@ -142,30 +129,19 @@ section {
     margin-bottom: 20px; /* Add space between sections */
 }
 
-section img {
-    max-width: 100%;
+h2 {
+    color: var(--primary-color);
+}
+
+/* Image styling */
+.main-content img {
+    max-width: 100%; /* Ensure images are responsive */
     height: auto; /* Maintain aspect ratio */
-}
-
-/* Table styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-table, th, td {
-    border: 1px solid #ccc;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
+    max-height: 200px; /* Set a maximum height for the images */
 }
 
 /* Style for footer */
 footer {
-    grid-area: footer;
     background-color: var(--header-footer-cl); /* Use header-footer color */
     color: var(--main-text-color); /* Set text color to white */
     text-align: center;
