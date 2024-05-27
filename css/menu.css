@@ -1,14 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 /* Root variables for colors */
 :root {
-    --primary-color: #219EBC;
+    --primary-color: #fff; /* Change primary color to white */
     --header-footer-cl: #023047;
-    --title-color: #8ECAE6;
+    --title-color: #fff; /* Title color variable */
+    --text-color: #fff; /* Text color variable */
     --hover-color: #ff6347;
     --background-color: #fff;
     --main-bg-color: #333;
-    --main-text-color: #fff;
+}
+
+/* Style for navigation */
+nav {
+    background-color: var(--header-footer-cl);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0; /* Remove margin bottom */
 }
 
 /* Reset default list styles */
@@ -30,7 +37,7 @@ nav ul li a {
     display: block; /* Make links block elements */
     padding: 10px; /* Add padding for better click area */
     background-color: var(--header-footer-cl); /* Background color for links */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 0; /* Remove rounded corners */
 }
 
 /* Style for active navigation link */
@@ -40,14 +47,20 @@ nav ul li a:hover {
 
 /* Submenu styling */
 .submenu {
+    display: none; /* Hide submenu by default */
     list-style-type: none;
     padding-left: 20px; /* Indent submenu items */
     margin-top: 10px;
 }
 
+/* Show submenu on hover */
+nav ul li:hover .submenu {
+    display: block; /* Show submenu when hovering over the parent menu item */
+}
+
 .submenu li a {
     background-color: transparent; /* Remove background for submenu items */
-    color: var(--main-text-color); /* Set text color to white */
+    color: var(--text-color); /* Set text color */
 }
 
 /* Style for logo */
@@ -66,7 +79,7 @@ nav ul li a:hover {
 }
 
 .logo h1 {
-    color: var(--title-color); /* Use title color */
+    color: var(--title-color); /* Use title color variable */
     font-size: 24px; /* Adjust the font size of the title */
     margin: 0; /* Remove default margin */
 }
@@ -95,7 +108,7 @@ body {
 header {
     width: 100%;
     background-color: var(--header-footer-cl); /* Use header-footer color */
-    color: var(--main-text-color); /* Set text color to white */
+    color: var(--text-color); /* Set text color */
     padding: 20px 0;
     text-align: center; /* Center align text */
 }
@@ -113,14 +126,14 @@ header {
 .sidebar {
     background-color: var(--header-footer-cl); /* Set background color */
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 0; /* Remove rounded corners */
 }
 
 /* Main content styling */
 .main-content {
     background-color: var(--main-bg-color); /* Set background color */
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 0; /* Remove rounded corners */
     max-width: 800px; /* Set the fixed width for main content */
 }
 
@@ -130,7 +143,7 @@ section {
 }
 
 h2 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Set title color */
 }
 
 /* Image styling */
@@ -143,7 +156,7 @@ h2 {
 /* Style for footer */
 footer {
     background-color: var(--header-footer-cl); /* Use header-footer color */
-    color: var(--main-text-color); /* Set text color to white */
+    color: var(--text-color); /* Set text color */
     text-align: center;
     padding: 20px 0;
 }
