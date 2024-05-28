@@ -1,8 +1,8 @@
 /* Root variables for colors */
 :root {
-    --primary-color: #fff; /* Change primary color to white */
+    --primary-color: #219EBC; 
     --header-footer-cl: #023047;
-    --title-color: #fff; /* Title color variable */
+    --title-color: var(--primary-color); /* Title color uses primary color */
     --text-color: #fff; /* Text color variable */
     --hover-color: #ff6347;
     --background-color: #fff;
@@ -12,7 +12,7 @@
 /* Style for navigation */
 nav {
     background-color: var(--header-footer-cl);
-    color: var(--text-color);
+    color: var(--primary-color);
     padding: 20px;
     text-align: center;
     margin-bottom: 0; /* Remove margin bottom */
@@ -138,6 +138,7 @@ header {
     padding: 20px;
     border-radius: 0; /* Remove rounded corners */
     max-width: 800px; /* Set the fixed width for main content */
+    color: var(--text-color); /* Set text color to white */
 }
 
 /* Section styling */
