@@ -67,21 +67,19 @@ nav ul li:hover .submenu {
 .logo {
     display: flex; /* Use flexbox to align items */
     align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
     text-decoration: none;
 }
 
 .logo img {
-    width: 50px; /* Adjust the width of the image */
+    width: 100px; /* Adjust the width of the image */
     height: auto; /* Maintain aspect ratio */
     margin-right: 10px; /* Add some space between image and title */
     filter: invert(1) hue-rotate(180deg); /* Change the color of the image */
 }
 
 .logo h1 {
-    color: var(--title-color); /* Use title color variable */
+    color: var(--title-color); /* Use title color */
     font-size: 24px; /* Adjust the font size of the title */
-    margin: 0; /* Remove default margin */
 }
 
 /* Body styling */
@@ -106,11 +104,16 @@ body {
 
 /* Header styling */
 header {
+    grid-area: header;
     width: 100%;
     background-color: var(--header-footer-cl); /* Use header-footer color */
-    color: var(--text-color); /* Set text color */
+    color: var(--main-text-color); /* Set text color to white */
+    text-align: center;
     padding: 20px 0;
-    text-align: center; /* Center align text */
+    height: 150px; /* Set the desired fixed height */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 /* Content setup with grid */

@@ -68,7 +68,6 @@ nav ul li:hover .submenu {
 .logo {
     display: flex; /* Use flexbox to align items */
     align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
     text-decoration: none;
 }
 
@@ -117,6 +116,10 @@ header {
     color: var(--main-text-color); /* Set text color to white */
     text-align: center;
     padding: 20px 0;
+    height: 150px; /* Set the desired fixed height */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 /* Navigation styling */
