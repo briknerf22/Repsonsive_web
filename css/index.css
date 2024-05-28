@@ -68,7 +68,7 @@ nav ul li:hover .submenu {
 .logo {
     display: flex; /* Use flexbox to align items */
     align-items: center; /* Center items vertically */
-    text-decoration: none;
+        text-decoration: none;
 }
 
 .logo img {
@@ -104,8 +104,9 @@ body {
         "footer";
     grid-template-columns: 1fr;
     max-width: 1000px; /* Set the maximum width for the container */
-    width: 100%; /* Make container take the full width available */
+    width: 100%; /* Ensure it takes full width up to max-width */
     background-color: var(--background-color); /* Set background color */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 /* Header styling */
