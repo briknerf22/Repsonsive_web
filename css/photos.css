@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
- 
-/* Root variables for colors */ 
+/* Root variables for colors */
 :root { 
     --primary-color: #219EBC; 
     --header-footer-cl: #023047; 
@@ -9,32 +7,65 @@
     --background-color: #fff; 
     --main-bg-color: #333; 
     --main-text-color: #fff; 
-} 
- 
-/* Reset default list styles */ 
+}
+
+/* Reset default list styles */
 nav ul { 
     list-style-type: none; 
     padding: 0; 
     margin: 0; 
-} 
- 
-/* Style for navigation links */ 
+}
+
+/* Style for navigation links */
 nav ul li { 
     display: inline; /* Display items horizontally */ 
     margin-right: 20px; /* Add space between items */ 
-} 
- 
-/* Style for navigation links */ 
+    position: relative; /* Allow sub-menu positioning */
+}
+
+/* Style for navigation links */
 nav ul li a { 
     text-decoration: none; /* Remove underline */ 
     color: var(--primary-color); /* Use primary color */ 
-} 
- 
-/* Style for active navigation link */ 
+}
+
+/* Style for active navigation link */
 nav ul li a:hover { 
     color: var(--hover-color); /* Use hover color */ 
-} 
- 
+}
+
+/* Submenu styles */
+.submenu {
+    display: none; /* Hide submenu by default */
+    position: absolute; /* Position relative to parent */
+    left: 0; /* Align to the left of parent */
+    top: 100%; /* Position below parent */
+    background-color: var(--header-footer-cl); /* Match header/footer color */
+    padding: 10px 0; /* Add padding */
+}
+
+.submenu li {
+    display: block; /* Display submenu items vertically */
+    margin-right: 0; /* Remove right margin */
+}
+
+.submenu li a {
+    color: var(--main-text-color); /* Set text color to white */
+    padding: 10px 20px; /* Add padding */
+    display: block; /* Make links block elements */
+    text-align: left; /* Align text to the left */
+}
+
+.submenu li a:hover {
+    background-color: var(--hover-color); /* Change background on hover */
+    color: var(--background-color); /* Change text color on hover */
+}
+
+/* Show submenu on hover */
+nav ul li:hover .submenu {
+    display: block; /* Show submenu */
+}
+
 /* Style for logo */
 .logo {
     display: flex; /* Use flexbox to align items */
@@ -53,8 +84,8 @@ nav ul li a:hover {
     color: var(--title-color); /* Use title color */
     font-size: 24px; /* Adjust the font size of the title */
 }
- 
-/* Body styling */ 
+
+/* Body styling */
 body { 
     display: flex; 
     justify-content: center; /* Horizontally center the container */ 
@@ -63,9 +94,9 @@ body {
     margin: 0; /* Remove default margin */ 
     background-color: var(--background-color); /* Set background color to white */ 
     font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */ 
-} 
- 
-/* Container setup with grid */ 
+}
+
+/* Container setup with grid */
 .container { 
     display: grid; 
     grid-template-areas: 
@@ -77,8 +108,8 @@ body {
     max-width: 1000px; /* Set the maximum width for the container */ 
     width: 100%; /* Make container take the full width available */ 
     background-color: var(--background-color); /* Set background color */ 
-} 
- 
+}
+
 /* Header styling */
 header {
     grid-area: header;
@@ -92,99 +123,99 @@ header {
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
 }
- 
-/* Navigation styling */ 
+
+/* Navigation styling */
 nav { 
     grid-area: nav; 
     background-color: var(--header-footer-cl); /* Use header-footer color */ 
     color: var(--main-text-color); /* Set text color to white */ 
     text-align: center; 
     padding: 20px; 
-} 
- 
-/* Main styling */ 
+}
+
+/* Main styling */
 main { 
     grid-area: main; 
     padding: 20px; /* Add some padding */ 
     background-color: var(--main-bg-color); /* Set background color */ 
     color: var(--main-text-color); /* Set text color */ 
     box-sizing: border-box; 
-} 
- 
-/* Gallery styling */ 
+}
+
+/* Gallery styling */
 .gallery { 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
     gap: 10px; 
-} 
- 
+}
+
 .gallery img { 
     width: 100%; 
     height: auto; 
     object-fit: cover; /* Ensure images cover the area without deforming */ 
-} 
- 
-/* Style for larger images */ 
+}
+
+/* Style for larger images */
 .gallery img.large { 
     grid-column: span 2; /* Make the image span two columns */ 
     grid-row: span 2; /* Make the image span two rows */ 
-} 
- 
-/* Responsive adjustments */ 
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) { 
     .gallery { 
         grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */ 
     } 
- 
+
     .gallery img.large { 
         grid-column: span 1; /* Make large images span one column on smaller screens */ 
         grid-row: span 1; /* Make large images span one row on smaller screens */ 
     } 
-} 
- 
+}
+
 @media (max-width: 480px) { 
     .gallery { 
         grid-template-columns: 1fr; /* Single column on very small screens */ 
     } 
-} 
- 
-/* Style for footer */ 
+}
+
+/* Style for footer */
 footer { 
     grid-area: footer; 
     background-color: var(--header-footer-cl); /* Use header-footer color */ 
     color: var(--main-text-color); /* Set text color to white */ 
     text-align: center; 
     padding: 20px 0; 
-} 
- 
-/* Style for footer content */ 
+}
+
+/* Style for footer content */
 .footer-content { 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
     max-width: 1000px; 
     margin: 0 auto; 
-} 
- 
-/* Style for social icon container */ 
+}
+
+/* Style for social icon container */
 .social-icons { 
     display: flex; 
     justify-content: center; 
     align-items: center; 
     margin-bottom: 20px; 
-} 
- 
+}
+
 /* Style for individual social icon */ 
 .social-icon { 
     margin-right: 10px; 
     text-align: center; 
-} 
- 
+}
+
 .social-icon img { 
     width: 30px; 
     height: auto; 
-} 
- 
+}
+
 /* Style for footer info */ 
 .footer-info { 
     text-align: center; 
