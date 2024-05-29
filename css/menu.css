@@ -18,6 +18,11 @@ nav {
     margin-bottom: 0; /* Remove margin bottom */
 }
 
+/* Style for section headings to be white */
+section h2 {
+    color: var(--main-text-color); /* Set text color to white */
+}
+
 /* Reset default list styles */
 nav ul {
     list-style-type: none;
