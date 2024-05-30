@@ -68,7 +68,7 @@ nav ul li:hover .submenu {
 .logo {
     display: flex; /* Use flexbox to align items */
     align-items: center; /* Center items vertically */
-        text-decoration: none;
+    text-decoration: none;
 }
 
 .logo img {
@@ -165,15 +165,9 @@ section {
     object-fit: cover; /* Maintain aspect ratio without deforming */
 }
 
-/* Style for the first image */
-.photo-container img:first-child {
-    height: 200px; /* Set the desired height */
-}
-
-section img {
-    max-width: 100%; /* Ensure the image doesn't exceed its container */
-    max-height: 200px; /* Set a maximum height for the images */
-    object-fit: cover; /* Maintain aspect ratio without deforming */
+/* Add margin to the second photo */
+.photo-container img.second-photo {
+    margin-left: 20px; /* Add some margin to the left of the second photo */
 }
 
 /* Style for footer */
@@ -216,4 +210,17 @@ footer {
 /* Style for footer info */
 .footer-info {
     text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .photo-container img.second-photo {
+        margin-left: 10px; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-container img.second-photo {
+        margin-left: 5px; /* Adjust margin for very small screens */
+    }
 }
