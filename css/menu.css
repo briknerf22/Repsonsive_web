@@ -7,6 +7,7 @@
     --hover-color: #ff6347;
     --background-color: #fff;
     --main-bg-color: #333;
+    --subheading-color: #8ECAE6; 
 }
 
 /* Style for navigation */
@@ -20,7 +21,11 @@ nav {
 
 /* Style for section headings to be white */
 section h2 {
-    color: var(--main-text-color); /* Set text color to white */
+    color: var(--subheading-color); /* Set text color to subheading color */
+}
+
+main h1 {
+    color: var(--subheading-color);
 }
 
 /* Reset default list styles */
@@ -149,10 +154,6 @@ header {
 /* Section styling */
 section {
     margin-bottom: 20px; /* Add space between sections */
-}
-
-h2 {
-    color: var(--primary-color); /* Set title color */
 }
 
 /* Image styling */
