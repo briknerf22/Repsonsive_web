@@ -139,6 +139,10 @@ main {
     box-sizing: border-box;
 }
 
+main h2, h1 {
+    color: var(--title-color);
+}
+
 /* Contact container styling */
 .contact-container {
     display: flex;

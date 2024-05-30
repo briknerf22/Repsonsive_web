@@ -141,6 +141,10 @@ main {
     box-sizing: border-box;
 }
 
+main h1 {
+    color: var(--title-color);
+}
+
 /* Section styling */
 section {
     margin-bottom: 20px; /* Add space between sections */
