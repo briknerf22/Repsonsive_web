@@ -224,3 +224,14 @@ footer {
         margin-left: 5px; /* Adjust margin for very small screens */
     }
 }
+
+.description h2 {
+    color: var(--title-color); /* Use title color */
+    font-family: 'EB Garamond', serif; /* Use EB Garamond for titles */
+    margin-top: 20px; /* Add some space above the title */
+}
+
+.description p {
+    margin-top: 10px; /* Add some space between paragraphs */
+    line-height: 1.6; /* Improve readability with line height */
+}
