@@ -239,3 +239,30 @@ footer {
     margin-top: 10px; /* Add some space between paragraphs */
     line-height: 1.6; /* Improve readability with line height */
 }
+
+/* Media query for tablets */
+@media screen and (max-width: 1024px) {
+    .container {
+        display: block; /* Change display to block for single-column layout */
+    }
+    .sidebar {
+        display: none; /* Hide sidebar by default on tablets */
+    }
+    nav ul li {
+        display: block; /* Change display to block for list items */
+        margin-right: 0; /* Reset margin */
+        position: static; /* Reset position */
+    }
+    .submenu {
+        position: static; /* Reset position */
+        top: auto; /* Reset top position */
+        left: auto; /* Reset left position */
+    }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 600px) {
+    main {
+        padding: 10px; /* Adjust padding for better readability */
+    }
+}
