@@ -8,6 +8,7 @@
     --background-color: #fff;
     --main-bg-color: #333;
     --subheading-color: #8ECAE6; 
+    --nav-title-color: #ff6347; /* Custom color for nav title */
 }
 
 /* Style for navigation */
@@ -48,6 +49,15 @@ nav ul li a {
     padding: 10px; /* Add padding for better click area */
     background-color: var(--header-footer-cl); /* Background color for links */
     border-radius: 0; /* Remove rounded corners */
+}
+
+/* Style for nav title */
+nav ul li.nav-title {
+    color: var(--nav-title-color); /* Use nav title color */
+    font-size: 1.5em; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    background-color: transparent; /* Remove background color */
+    padding: 10px 0; /* Adjust padding */
 }
 
 /* Style for active navigation link */
