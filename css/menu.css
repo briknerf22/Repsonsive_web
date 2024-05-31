@@ -213,3 +213,26 @@ footer {
 .footer-info {
     text-align: center;
 }
+
+/* Media query for tablets */
+@media screen and (max-width: 1024px) {
+    .container {
+        display: block; /* Change display to block for single-column layout */
+    }
+    .sidebar {
+        display: none; /* Hide sidebar by default on tablets */
+    }
+    .toggle-nav {
+        display: block; /* Display toggle button */
+    }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 600px) {
+    .main-content {
+        padding: 10px; /* Adjust padding for better readability */
+    }
+    .toggle-nav {
+        display: block; /* Display toggle button */
+    }
+}
