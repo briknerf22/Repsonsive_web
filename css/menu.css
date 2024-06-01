@@ -140,7 +140,6 @@ header {
 .content {
     display: grid;
     grid-template-columns: 200px 1fr;
-    gap: 20px; /* Add gap between sidebar and main content */
     max-width: 1200px; /* Set maximum width */
     margin: 0 auto; /* Center the content */
 }
