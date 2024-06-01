@@ -136,8 +136,32 @@ header {
     justify-content: center; /* Center items horizontally */
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensure that borders are collapsed */
+    margin-bottom: 20px; /* Add some space below the table */
+}
+
 thead th {
     text-align: left;
+    border-bottom: 2px solid var(--background-color); /* Add a bottom border to the table header */
+    padding: 10px; /* Add padding to the table header cells */
+}
+
+tbody td {
+    border-bottom: 1px solid #ccc; /* Add a bottom border to the table body cells */
+    padding: 10px; /* Add padding to the table body cells */
+}
+
+/* Optional: Add borders to the sides and top of the table cells for a full grid effect */
+table, th, td {
+    border: 1px solid #ddd; /* Light gray border for a clean look */
+    padding: 8px; /* Adjust padding as needed */
+}
+
+th {
+    background-color: var(--background-color); /* Add background color to header cells */
+    color: var(--main-bg-color); /* Set text color */
 }
 
 /* Content setup with grid */
