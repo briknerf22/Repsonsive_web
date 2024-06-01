@@ -136,6 +136,10 @@ header {
     justify-content: center; /* Center items horizontally */
 }
 
+thead th {
+    text-align: left;
+}
+
 /* Content setup with grid */
 .content {
     display: grid;
