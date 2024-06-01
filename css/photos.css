@@ -13,7 +13,9 @@
 nav ul { 
     list-style-type: none; 
     padding: 0; 
-    margin: 0; 
+    margin: 0;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Distribute items evenly */ 
 }
 
 /* Style for navigation links */
@@ -34,36 +36,36 @@ nav ul li a:hover {
     color: var(--hover-color); /* Use hover color */ 
 }
 
-/* Submenu styles */
+/* Submenu styling */
 .submenu {
-    display: none; /* Hide submenu by default */
-    position: absolute; /* Position relative to parent */
-    left: 0; /* Align to the left of parent */
-    top: 100%; /* Position below parent */
-    background-color: var(--header-footer-cl); /* Match header/footer color */
-    padding: 10px 0; /* Add padding */
-}
-
-.submenu li {
-    display: block; /* Display submenu items vertically */
-    margin-right: 0; /* Remove right margin */
-}
-
-.submenu li a {
-    color: var(--main-text-color); /* Set text color to white */
-    padding: 10px 20px; /* Add padding */
-    display: block; /* Make links block elements */
-    text-align: left; /* Align text to the left */
-}
-
-.submenu li a:hover {
-    background-color: var(--hover-color); /* Change background on hover */
-    color: var(--background-color); /* Change text color on hover */
+    display: none;
+    position: absolute;
+    top: 100%; /* Position submenu below parent */
+    left: 50%; /* Center submenu under the parent */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: var(--header-footer-cl); /* Use header-footer color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    list-style-type: none;
+    width: 200px; /* Set submenu width */
+    z-index: 1000; /* Ensure submenu is on top */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow for depth */
 }
 
 /* Show submenu on hover */
 nav ul li:hover .submenu {
-    display: block; /* Show submenu */
+    display: block;
+}
+
+/* Submenu link styling */
+.submenu li {
+    display: block;
+    text-align: center; /* Center submenu links */
+}
+
+.submenu li a {
+    color: var(--main-text-color); /* Set text color to white */
+    display: block;
+    padding: 5px 0; /* Adjust vertical padding */
 }
 
 /* Style for logo */
