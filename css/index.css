@@ -42,15 +42,17 @@ nav ul li a:hover {
 
 /* Submenu styling */
 .submenu {
-    display: none; /* Hide submenu by default */
-    position: absolute; /* Position submenu relative to parent */
+    display: none;
+    position: absolute;
     top: 100%; /* Position submenu below parent */
-    left: 0;
-    width: 100%; /* Make submenu as wide as the parent */
+    left: 50%; /* Center submenu under the parent */
+    transform: translateX(-50%); /* Center horizontally */
     background-color: var(--header-footer-cl); /* Use header-footer color */
-    padding: 10px 0; /* Add some padding */
+    padding: 10px 20px; /* Adjust padding as needed */
     list-style-type: none;
+    width: 200px; /* Set submenu width */
     z-index: 1000; /* Ensure submenu is on top */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow for depth */
 }
 
 /* Show submenu on hover */
@@ -61,13 +63,13 @@ nav ul li:hover .submenu {
 /* Submenu link styling */
 .submenu li {
     display: block;
-    margin-right: 0;
+    text-align: center; /* Center submenu links */
 }
 
 .submenu li a {
     color: var(--main-text-color); /* Set text color to white */
     display: block;
-    padding: 5px 10px;
+    padding: 5px 0; /* Adjust vertical padding */
 }
 
 /* Style for logo */

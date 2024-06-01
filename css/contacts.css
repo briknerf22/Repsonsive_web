@@ -11,17 +11,17 @@
     --main-text-color: #fff;
 }
 
-/* Reset default list styles */
+/* Style for navigation links */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
 }
 
 /* Style for navigation links */
 nav ul li {
-    display: inline; /* Display items horizontally */
-    margin-right: 20px; /* Add space between items */
     position: relative; /* Required for submenu positioning */
 }
 
@@ -38,30 +38,34 @@ nav ul li a:hover {
 
 /* Submenu styling */
 .submenu {
-    display: none; /* Hide submenu by default */
-    position: absolute; /* Position submenu relative to parent */
+    display: none;
+    position: absolute;
     top: 100%; /* Position submenu below parent */
-    left: 0;
+    left: 50%; /* Center submenu under the parent */
+    transform: translateX(-50%); /* Center horizontally */
     background-color: var(--header-footer-cl); /* Use header-footer color */
-    padding: 10px;
+    padding: 10px 20px; /* Add padding */
     list-style-type: none;
-}
-
-/* Show submenu on hover */
-nav ul li:hover .submenu {
-    display: block;
+    width: 200px; /* Set submenu width to auto */
+    z-index: 1000; /* Ensure submenu is on top */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow for depth */
 }
 
 /* Submenu link styling */
 .submenu li {
     display: block;
-    margin-right: 0;
+    text-align: center; /* Center submenu links */
 }
 
 .submenu li a {
     color: var(--main-text-color); /* Set text color to white */
     display: block;
-    padding: 5px 10px;
+    padding: 10px; /* Add padding */
+}
+
+/* Show submenu on hover */
+nav ul li:hover .submenu {
+    display: block;
 }
 
 /* Style for logo */
