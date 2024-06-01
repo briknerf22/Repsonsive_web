@@ -164,6 +164,7 @@ main h2, h1 {
     min-width: 300px;
     height: 350px;
     background-color: var(--main-bg-color); /* Set background color to match main */
+    align-self: flex-start; /* Align the map to the start of its container */
 }
 
 .map iframe {

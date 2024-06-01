@@ -40,7 +40,6 @@ nav ul li a:hover {
     color: var(--hover-color); /* Use hover color */
 }
 
-/* Submenu styling */
 .submenu {
     display: none;
     position: absolute;
@@ -58,18 +57,18 @@ nav ul li a:hover {
 /* Show submenu on hover */
 nav ul li:hover .submenu {
     display: block;
+    text-align: center; /* Center the submenu links horizontally */
 }
 
-/* Submenu link styling */
 .submenu li {
-    display: block;
-    text-align: center; /* Center submenu links */
+    text-align: center; /* Center the submenu links horizontally */
 }
 
 .submenu li a {
     color: var(--main-text-color); /* Set text color to white */
     display: block;
-    padding: 5px 0; /* Adjust vertical padding */
+    padding: 10px; /* Adjust vertical padding */
+    text-align: center; /* Center text horizontally */
 }
 
 /* Style for logo */
@@ -114,7 +113,6 @@ body {
     max-width: 1000px; /* Set the maximum width for the container */
     width: 100%; /* Ensure it takes full width up to max-width */
     background-color: var(--background-color); /* Set background color */
-    margin: 0 auto; /* Center the container horizontally */
 }
 
 /* Header styling */
