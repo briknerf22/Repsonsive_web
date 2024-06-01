@@ -54,18 +54,19 @@ nav ul li a:hover {
 /* Show submenu on hover */
 nav ul li:hover .submenu {
     display: block;
+    text-align: center;
 }
 
 /* Submenu link styling */
 .submenu li {
-    display: block;
     text-align: center; /* Center submenu links */
 }
 
 .submenu li a {
     color: var(--main-text-color); /* Set text color to white */
     display: block;
-    padding: 5px 0; /* Adjust vertical padding */
+    padding: 10px; /* Adjust vertical padding */
+    text-align: center;
 }
 
 /* Style for logo */
